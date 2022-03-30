@@ -1,0 +1,214 @@
+<!DOCTYPE HTML>
+<html xml:lang="en" lang="en">
+<head>
+  <title>CSC 196V  Assignment 2</title>
+  <style>
+* { padding: 0; margin: 0; }
+
+body {
+  margin: 0 auto 0 auto;
+  padding: 0;
+  background-color: #33333f;
+  width: 840px;
+  font-family: "Avenir", "Avenir Next", Helvetica Neue, Arial;
+  font-size: 0.95em;
+}
+
+a, a:visited { text-decoration: none; color: #7533f4; }
+a:hover { text-decoration: underline; color: #f4b014; }
+img, a.img, a:hover.img { border: none; }
+
+img {
+  max-width: 800px;
+}
+
+h1, h2, h3, h4, h5 {
+  color: #492a7c;
+  background-color: inherit;
+  font-weight: normal;
+  padding: 0 0 5px 0;
+  margin: 15px 0 0 0;
+  border: none;
+  clear: right;
+}
+h1 { font-size: 18pt; margin:  5px 0 10px 0; line-height: 28px; }
+h2 { font-size: 14pt; margin: 30px 0 15px 0; letter-spacing: 0.01em; border-bottom: 1px solid #ccc;  line-height: 20px;}
+h3 { font-size: 13pt; }
+h4 { font-size: 12pt; }
+h5 { font-size: 11pt; }
+p { margin: 0 0 10px 0; }
+hr { border: 0px; border-top: 1px solid #ccc; height: 0px; }
+ol { margin: 1em; }
+
+.content {
+  margin: 0;
+  padding: 15px 20px;
+  background-color: #ffffff;
+}
+
+.article {
+  line-height: 1.5em;
+}
+
+.entry  {
+  border-top: 1px solid #ddd;
+  padding-top: 2px;
+  margin-top: 3em;
+}
+  </style>
+</head>
+
+<body>
+<div class='content'>
+
+<section>
+  <h1>Assignment 2: Exploratory Data Analysis</h1>
+
+  <p>
+    <strong>Sai Suresh</strong>
+  </p>
+</section>
+
+<section>
+  <h2>Dataset</h2>
+
+  <p>
+    Twitch Streamer Data: 2020<br/>
+    Dataset of top Twitch channels; includes follower count, average viewer count, etc.
+  </p>
+
+  <p>
+    The data is available online at:
+    <strong>
+      <a href="https://www.kaggle.com/aayushmishra1512/twitchdata">Kaggle</a>
+    </strong>
+  </p>
+</section>
+
+<section>
+  <h2>Initial Analysis Questions</h2>
+  <ol>
+    <li>Which Channels Have the Most Average Viewers?</li>
+    <li>Which Streamers Have the Most Overall Views?</li>
+    <li>Which Streamers Gained the Most Followers? (i.e. most growth))</li>
+  </ol>
+</section>
+
+<section>
+  <h2>Discoveries &amp; Insights</h2>
+
+  <div class="entry">
+    <p class="caption">
+    1) Average Viewership Across Top Channels
+    </p>
+	<img src="Q1.jpg" />
+  </div>
+
+  <div class="entry">
+    <p class="caption">
+    2) Views Gained Across Top Channels
+    </p>
+	<img src="Q2.jpg" />
+  </div>
+
+  <div class="entry">
+	<p class="caption">
+    3) Which Streamers Gained the Most Followers? (i.e. grew the most)
+    </p>
+	<img src= "Q3.jpg"/>
+	<p>
+	
+	</p>
+  </div>
+
+  <div class="entry">
+    <p class="caption">
+    4) Which Language/Region Grew the Most in 2020?
+    </p>
+	<img src="Q4.jpg" />
+	<p>
+	Western regions overall grew the most in 2020; makes intuitive sense since Twitch in itself is an American company. 
+	</p>
+  </div>
+
+  <div class="entry">
+    <p class="caption">
+    5) Stream time vs Followers Gained; is there a Correlation?
+    </p>
+	<img src="Q5.jpg" />
+	<p>
+	Yes, a clear trend is present; as stream time increases, the number of new followers gained decreases. This tells us that the growth of a channel (new followers of the channel) is heavily skewed to the earlier portions of a live-stream.
+	</p>
+  </div>
+
+  <div class="entry">
+    <p class="caption">
+    6) Stream time vs average viewership? Is there a correlation?
+    </p>
+	<img src="Q6.jpg" />
+	<p>
+	Like 5, a clear trend is present; average viewership tends to decline the longer a stream continues. This tells us that a majority of viewers join the earlier portions of a stream, and not many remain until the end. 
+	</p>
+  </div>
+
+  <div class="entry">
+    <p class="caption">
+    7) Does being offically partnered with Twitch have an impact on channel growth? 
+    </p>
+	<img src="Q7.jpg" />
+  </div>
+
+  <div class="entry">
+    <p class="caption">
+    8) What are the biggest unpartnered channels? What language is the channel?
+    </p>
+	<img src="Q8.jpg" />
+  </div>
+
+  <div class="entry">
+    <p class="caption">
+    9) How quickly did mature channels grow?
+    </p>
+	<img src="Q9.jpg" />
+	<p>
+	Line represents the trend of new followers gained; the trend is rather positive, which in part can be explained due to the lockdowns from the pandemic (more in summary).
+	</p>
+  </div>
+
+  <div class="entry">
+    <p class="caption">
+    10) How quickly did non-mature channels grow?
+    </p>
+	<img src="Q10.jpg" />
+	<p>
+	Line represents the trend of new followers gained; rate of growth was markedly slower than mature channels.
+	</p>
+  </div>
+
+  <div class="entry">
+    <h1>Summary</h1>
+    
+    <h3>Initial questions: <h3>
+	<p>
+	Based off the three initial questions, we can easily see which Twitch channels have the most average viewers in a live stream, most overall views, and the greatest amount of new followers. This makes a lot of sense, as channels that have the most viewer interaction will have the most followers. Furthermore, a majority spoke English, or were from Western regions. 
+    </p>
+	
+	<h3>Deeper Dive </h3>
+	<p>
+	After the initial three questions, I started interacting with the data available, and found some interesting results. The most interesting result I found was that the rate of growth (signified by followers gained) was much faster for channels identifying as mature as opposed to those that did not identify as mature. In the context of COVID-19
+	and mandatory lockdowns, this makes sense, since an influx of mature viewers likely joined twitch and found mature streamers they enjoyed to watch. I was also surprised to see how big some unpartnered channels were; some have over one million followers, but I am not sure why these channels remain unpartnered. 
+	</p>
+	
+	<p>
+	Another correlation that makes intuitive sense is average viewership vs. time spent streaming. As time spent streaming increases, the trend of average viewership tends to decrease. Considering how long some streamers live-stream, it makes sense as to how average viewship declines in relation to time; not viewers stay to watch an entire stream.
+	</p>
+	
+	<p>
+	One result that surprised me was the disparity between unpartnered and partnered channels, both in terms of growth (new followers) as well as total number of followers. I expected there to be a difference between the two, but did not expect even close to that level of a difference.
+	</p>
+  </div>
+</section>
+
+</div>
+</body>
+</html>
